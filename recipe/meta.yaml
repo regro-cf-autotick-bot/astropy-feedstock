@@ -41,13 +41,13 @@ requirements:
     - jinja2 >=3
     - cython >=3.0.0,<4
     - setuptools_scm >=8.0.0
-    - extension-helpers =1
+    - extension-helpers =1.4
     - numpy
   run:
     - python
-    - numpy >=1.23.2
+    - numpy >=1.24
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2025.9.29.0.35.48
+    - astropy-iers-data >=0.2025.10.27.0.39.10
     - pyyaml >=6.0.0
     - packaging >=22.0.0
   run_constrained:
@@ -100,27 +100,28 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
-        - matplotlib-base >=3.6.0
+        - matplotlib-base >=3.8.0
         - scipy >=1.9.2
         - certifi >=2022.6.15.1
         - ipython >=8.0.0
         - ipywidgets >=7.7.3
         - ipykernel >=6.16.0
         - ipydatagrid >=1.1.13
-        # We also need numpy from dask[array] but we are already going to install that.
-        - dask-core >=2022.5.1
-        - h5py >=3.8.0
-        - pyarrow >=10.0.1
+        # We also need numpy from dask[dataframe] but we are already going to install that.
+        - dask-core >=2024.8.0
+        - h5py >=3.9.0
+        - pyarrow >=14.0.2
         - beautifulsoup4 >=4.9.3
         - html5lib >=1.1
         - bleach >=3.2.1
         - pandas >=2.0
-        - sortedcontainers >=1.5.7
+        - sortedcontainers >=2.1.0
         - pytz >=2016.10
-        - jplephem >=2.6
+        - jplephem >=2.17.0
         - mpmath >=1.2.1
         - bottleneck >=1.3.3
         - fsspec >=2023.4.0
+        - narwhals >=1.42.0
         # fsspec optional deps
         - aiohttp
         - s3fs >=2023.4.0
