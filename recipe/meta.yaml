@@ -80,7 +80,6 @@ test:
     - astropy.timeseries.periodograms.lombscargle.implementations.cython_impl
     - astropy.table._column_mixins
     - astropy.table._np_utils
-    - astropy.utils._compiler
     - astropy.utils.xml._iterparser
     - astropy.wcs._wcs
 
